@@ -61,10 +61,17 @@ Alternatively, you can download the JMRI customised endnote version from here: h
 7. Examples of well-formed docx files for parsing are presened in the root directory of the project: https://drive.google.com/open?id=1FhDoh7fnXK0P3d8TN7RNR2f9YybGIShB
 
 ## How to use?
-Download and unpack the latest release: https://github.com/Vitaliy-1/DOCX2JATS/releases and
+Download and unpack the latest release: https://github.com/Vitaliy-1/DOCX2JATS/releases/download/1.0.3/docx2jats-1.0.3.zip and
 run as executable jar file. Please note that jar file and article docx file must be in one parent directory with stylesheets folder.
 Archive contains 1.jar file and stylesheets folder, which need to be unziped into one directory. Because I am not good programmer, there is a need to place article in docx format in this folder before making transformation. Suppose archive is unzipped on the drive C in the jats folder. Input article article1.docx is also situated there. From windows cmd user need to go to this folder and enter:
 `java -jar 1.jar article1.docx article1.xml`
+
+So or example, you have put in C://jats 
+
+Open COmmand window by pressing windows key + R and write cmd in the bar. A new command window will open up, then write
+cd c://jats followed by java -jar 1.jar article1.docx article1.xml  
+
+Make sure you have put the docx file in the jats folder and renamed it into article1.docx, the output will be article1.xml
 
 From version 1.0.3 there is no need to copy input article to the folder, where is executable jar file situated. But if one points the full path to the jar file, path to the input article must also be absolute. Otherwise the programm would not find stylesheets folder, e.g.:
 `java -jar 1.jar D:\article\article1.docx article1.xml` or `jar -jar C:\DOCX2JATS\1.jar D:\article\article1.docx article1.xml` 
